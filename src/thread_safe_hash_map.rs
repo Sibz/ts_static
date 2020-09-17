@@ -30,10 +30,10 @@ impl<T,U> TsHashMap<T,U> for ThreadSafeStruct<HashMap<T,U>> where T: Eq + Hash, 
     }
 }
 
+#[cfg(test)]
 mod tests {
     use std::collections::HashMap;
     use lazy_static::*;
-    #[macro_use]
     use crate::*;
     use crate::thread_safe_hash_map::TsHashMap;
 
@@ -43,7 +43,7 @@ mod tests {
     fn should_add_and_get_value() {
         TEST_ADD.set(Some(HashMap::new()));
 
-        TEST_ADD.insert(1, 2);
+        TEST_ADD.insert(1, 2).expect("Could not insert value");
 
         let value = TEST_ADD.remove(&1).expect("Couldn't remove value");
 
