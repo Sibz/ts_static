@@ -3,9 +3,13 @@ name = "ts_static"
 version = "0.1.0"
 authors = ["Sibz <12050358+Sibz@users.noreply.github.com>"]
 edition = "2018"
-description = ""
+description = "Wrapper macro for lazy static and a struct to aid in accessing a static in a thread safe way."
+license = "GNU GPLv3"
+repository = "https://github.com/Sibz/ts_static"
+homepage = "https://github.com/Sibz/ts_static"
+documentation = "https://github.com/Sibz/ts_static/README.md"
 
-
+exclude = [".idea/"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
