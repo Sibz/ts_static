@@ -1,5 +1,5 @@
 [package]
-name = "thead_safe_static"
+name = "ts_static"
 version = "0.1.0"
 authors = ["Sibz <12050358+Sibz@users.noreply.github.com>"]
 edition = "2018"
