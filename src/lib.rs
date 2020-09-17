@@ -1,6 +1,7 @@
 #![feature(test)]
 #![allow(dead_code)]
 mod thread_safe_static;
+mod thread_safe_hash_map;
 
 pub use thread_safe_static::*;
 

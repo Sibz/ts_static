@@ -38,3 +38,12 @@ MY_STATIC_NAME.with(|value| {
 ```rust
 MY_STATIC_NAME.set(None);
 ```
+
+## HashMaps
+
+There are two helper functions if your `T` is a `HashMap`:
+
+ - `insert(key, value)` - Adds or updates a value
+ - `remove(key)` - Gets and removes a value
+ 
+ These function much like the HashMap type but are guaranteed to be thread safe. 

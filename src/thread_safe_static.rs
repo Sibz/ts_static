@@ -6,9 +6,10 @@ pub struct ThreadSafeStruct<T> {
     pub value: Mutex<Option<T>>
 }
 
+
 impl<T> ThreadSafeStruct<T> {
     /// Borrows the value from the mutex, mutably in order to work with/on
-    pub fn with(&self, mut action: impl FnMut(&mut T)) -> Result<(), ThreadSafeStructError> {
+    pub fn with(&self, mut action: impl FnOnce(&mut T)) -> Result<(), ThreadSafeStructError> {
         match self.value.lock() {
             Err(_) => return Err(ThreadSafeStructError { kind: ThreadSafeStructErrorKind::OtherThreadPanickedWithLock }),
             Ok(mut mutex_guard) => {
