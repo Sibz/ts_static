@@ -15,8 +15,11 @@ ts_static!(STATIC_NAME, Type);
 ts_static!(MY_STATIC_NAME, i32);
 ```
 
-Static is set to a `ThreadSafeStruct<T>` to use the value
-use the with function, to set the value use the `set` function
+Static is set to a `ThreadSafeStruct<T>`.
+
+To set the value use the `set` member function.
+
+To work with the value use the `with` member function.
 
 You can access the mutex field directly `value` but the helpers should
 be suffice for most needs
